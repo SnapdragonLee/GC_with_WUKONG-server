@@ -36,7 +36,6 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
     │     └─gallery-1.jpg
     │     └─...
     │
-    ├─Detector.py
     ├─requirements.txt
 """
 
