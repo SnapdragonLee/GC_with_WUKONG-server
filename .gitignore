@@ -117,3 +117,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+GarbageIMG_large_repo/
+Mydata/
+runs/
+yolov5/
+VoiceRec/garbage-classification-data/
+test_yolov5.py
+
