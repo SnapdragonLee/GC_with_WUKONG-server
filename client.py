@@ -7,7 +7,7 @@ from PIL import Image
 
 
 def client(send_data):
-    host = '10.136.138.201'
+    host = '10.135.189.148'
     port = 1017
     s = socket.socket()
     s.connect((host, port))
