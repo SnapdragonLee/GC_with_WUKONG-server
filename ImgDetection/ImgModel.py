@@ -36,7 +36,6 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
     │     └─gallery-1.jpg
     │     └─...
     │
-    ├─Detector.py
     ├─requirements.txt
 """
 
@@ -73,8 +72,7 @@ class ModelClass:
     def prediction(self, img_data: os.path or np.ndarray, transforms=eval_trsf):
         # img1 = load_image(img_data)
         # img2 = Image.open(img_data)
-
-        img = cv2.imread(img_data)
+        img = img_data if isinstance(img_data, np.ndarray) else cv2.imread(img_data)
         result = self.model.predict(img, transforms=transforms, topk=2)
 
         # show text result (Not fixed)
