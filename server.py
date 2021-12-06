@@ -1,8 +1,11 @@
 import socketserver
 import socket
+import _thread
 import json
 import base64
 import io
+import time
+
 from PIL import Image, ImageFile
 from ImgDetection.ImgModel import ModelClass
 import numpy as np
@@ -20,13 +23,14 @@ class mainHandler(socketserver.BaseRequestHandler):
         while True:
             data = self.request.recv(4)
             img_size = int.from_bytes(data, 'big')
-            print(img_size)
+            print("图片大小:", img_size)
             data = bytes()
             less = img_size
             while less > 0:
-                print("接收中")
+                print("接收中 剩余:%d" % less)
                 data = data + self.request.recv(img_size)
                 less = img_size - len(data)
+                time.sleep(0.5)
             if not data:
                 break
             data = base64.b64decode(data)
@@ -63,7 +67,6 @@ def PILImageToCV(img):
 
 def virtual_processing(byte_stream):
     img = Image.open(byte_stream)
-    # img.show()
     print('get')
     img = PILImageToCV(img)
     return getImgPredict(img)
