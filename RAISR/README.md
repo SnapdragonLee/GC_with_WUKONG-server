@@ -7,4 +7,4 @@
 需要包：opencv, scipy, matplotlib, numpy (主项目中已经使用了该包，详情请见 `../requirements.txt`)
 
 测试完效果如下：
-![image](./fig2.png)
+![image](fig2.png)
