@@ -1,6 +1,6 @@
-## Server分支
+## GC_with_WUKONG server 端
 
-本分支为服务端代码，包括 `server.py` 服务端入口，`client.py` 客户端 DEMO。
+本仓库为服务端代码，包括 `server.py` 服务端入口，`client.py` 客户端 DEMO。
 
 `ImgDetection/` 为 PaddleX 识别代码，比 yolov 不知阴间多少。
 
@@ -16,7 +16,8 @@
 
 
 
-### Startup
+### Start up
 
 `pip install -r requirements.txt`
 
+其余各项功能请仔细阅读代码（作者也有点想不起来了hh）。
